@@ -1,0 +1,28 @@
+@use "../../styles/global" as *;
+
+.right-side-bar-section {
+  box-sizing: border-box;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #ffffff;
+  border-left: 1px solid #e0e0e0;
+  // padding: 15px;
+  overflow-y: auto;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  @include setFlexProperty(column, flex-start, flex-start, 10px);
+  &.right-side-bar-section-close {
+    width: $right-sidebar-close-width;
+  }
+  &__widthDiv {
+    width: $right-sidebar-width;
+  }
+  .horizontal-line {
+    width: calc(100% - 2px);
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 10px 0;
+  }
+}

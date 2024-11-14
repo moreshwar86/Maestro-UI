@@ -1,0 +1,91 @@
+@use "../../styles/global" as *;
+
+.dropdown-container {
+  @include setFlexProperty(column, flex-start, flex-start, 5px);
+  &.dropdown-container-inline {
+    @include setFlexProperty(row, flex-start, center, 5px);
+    .dropdown-label {
+      width: 200px;
+    }
+  }
+  .dropdown-label {
+    @include typography-m-normal();
+    width: 300px;
+  }
+  .dropdown-wrapper {
+    @include setFlexProperty(column, flex-start, flex-start, 0);
+    .dropdown-input {
+      width: 300px;
+      border: 1px solid $GREY;
+      border-radius: 5px;
+      &.closed .dropdown-header {
+        border-bottom: none;
+      }
+      &.disabled {
+        @include setDisabledInput();
+      }
+      &.error {
+        border: 1px solid $RED;
+      }
+      .dropdown-header {
+        position: relative;
+        padding: 5px 10px;
+        border-bottom: 1px solid $GREY;
+        height: 40px;
+        @include setFlexProperty(row, flex-start, center, 0);
+
+        @include typography-m-normal();
+        cursor: pointer;
+        .arrow {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid #000; // Change color as needed
+          transition: transform 0.3s ease;
+          &.down {
+            transform: translateY(-50%);
+          }
+          &.up {
+            transform: translateY(-50%) rotate(180deg);
+          }
+        }
+      }
+      .dropdown-options {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+        .option {
+          cursor: pointer;
+          padding: 5px 10px;
+        }
+        .selected {
+          background-color: $LIGHT_BLUE;
+        }
+      }
+    }
+    &.dropdown-wrapper-standard {
+      .dropdown-input {
+        border: none;
+        border-radius: 0;
+        &.error {
+          .dropdown-header {
+            border-bottom: 1px solid $RED;
+          }
+        }
+        .dropdown-header {
+          border-bottom: 1px solid $GREY;
+        }
+      }
+    }
+    .error-message {
+      color: $RED;
+      margin: 0;
+      padding-top: 10px;
+    }
+  }
+}

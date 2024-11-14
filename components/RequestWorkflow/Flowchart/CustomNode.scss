@@ -1,0 +1,26 @@
+@use "../../../styles/global" as *;
+
+.custom-node__container {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  background-color: $WHITE;
+  box-shadow: 8px 8px 2px 0px rgb(46 46 47 / 10%);
+  @include setFlexProperty(column, center, flex-start, 0px);
+  .status {
+    @include typography-s-normal();
+    @include setFlexProperty(row, space-between, center, 0);
+    margin-bottom: 10px;
+  }
+  .approver {
+    @include typography-m-bold();
+    margin-bottom: 15px;
+  }
+  .detail__container {
+    @include setFlexProperty(row, flex-start, center, 10px);
+    .value {
+      @include typography-s-normal();
+    }
+  }
+}

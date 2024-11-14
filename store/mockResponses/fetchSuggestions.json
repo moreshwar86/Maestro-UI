@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "suggestionId": "123",
+      "suggestionText": "Raise PR"
+    },
+    {
+      "suggestionId": "124",
+      "suggestionText": "P-Card"
+    },
+    {
+      "suggestionId": "125",
+      "suggestionText": "New Sourcing request"
+    },
+    {
+      "suggestionId": "126",
+      "suggestionText": "Vendor inquiry"
+    },
+    {
+      "suggestionId": "127",
+      "suggestionText": "more"
+    }
+  ]
+}

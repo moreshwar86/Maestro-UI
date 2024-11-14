@@ -1,0 +1,37 @@
+@use "../../styles/global" as *;
+.radio-group {
+  @include setFlexProperty(column, flex-start, flex-start, 5px);
+  &.radio-group-inline {
+    @include setFlexProperty(row, flex-start, flex-start, 5px);
+    .radio-group-label {
+      width: 200px;
+    }
+  }
+  .radio-group-label {
+    @include typography-m-normal();
+    width: 300px;
+  }
+  .radio-group-container {
+    .radio-group-options {
+      min-width: 300px;
+      @include setFlexProperty(row, flex-start, flex-start, 5px);
+      .radio-group-input {
+        cursor: pointer;
+        @include typography-m-normal();
+        input {
+          &:disabled {
+            @include setDisabledInput();
+          }
+        }
+      }
+      &.radio-group-options-column {
+        @include setFlexProperty(column, flex-start, flex-start, 5px);
+      }
+    }
+    .error-message {
+      color: $RED;
+      margin: 0;
+      padding-top: 10px;
+    }
+  }
+}

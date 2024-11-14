@@ -1,0 +1,12 @@
+{
+  "data": [
+    {
+      "query": "what is abc",
+      "query_id": "123"
+    },
+    {
+      "query": "what is pqr",
+      "query_id": "124"
+    }
+  ]
+}

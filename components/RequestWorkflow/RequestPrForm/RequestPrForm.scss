@@ -1,0 +1,18 @@
+@use "../../../styles/global" as *;
+.request-pr-form {
+  // padding: 10px;
+  width: 100%;
+  @include setFlexProperty(column, center, center, 20px);
+  .request-pr-form-header {
+    @include setFlexProperty(row, center, center, 20px);
+    h2 {
+      @include typography-l-normal();
+    }
+  }
+  .request-pr-form-content {
+    @include setFlexProperty(column, center, center, 20px);
+  }
+  .request-pr-form-actions {
+    @include setFlexProperty(row, center, center, 20px);
+  }
+}

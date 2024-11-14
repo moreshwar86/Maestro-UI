@@ -1,0 +1,16 @@
+@use "./styles/global" as *;
+
+.app {
+  padding: 20px;
+  border-radius: 5px;
+  color: $BLACK;
+}
+
+body {
+  font-family: $lato-regular;
+  margin: 0;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}

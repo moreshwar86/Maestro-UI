@@ -1,0 +1,16 @@
+@use "../../../styles/global" as *;
+
+.contract-form {
+  width: 100%;
+  height: 100%;
+  @include setFlexProperty(column, center, center, 20px);
+  .contract-form-header {
+    @include setFlexProperty(row, center, center, 20px);
+  }
+  .contract-form-content {
+    @include setFlexProperty(column, center, center, 20px);
+  }
+  .contract-form-actions {
+    @include setFlexProperty(row, center, center, 20px);
+  }
+}

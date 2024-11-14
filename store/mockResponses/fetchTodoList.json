@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "RequestType": "Overdue Request",
+      "Count": 3
+    },
+    {
+      "RequestType": "PR Approval",
+      "Count": 5
+    },
+    {
+      "RequestType": "Renewal Request",
+      "Count": 7
+    },
+    {
+      "RequestType": "Card Request",
+      "Count": 3
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+@use "../../../styles/global" as *;
+.summary {
+  width: 100%;
+  @include setFlexProperty(column, flex-start, flex-start, 10px);
+  p {
+    margin: 0;
+  }
+  &__title {
+    @include typography-m-bold();
+    @include setFlexProperty(row, center, center, 10px);
+    color: $secondary-color;
+    background: $light-blue;
+    width: 100%;
+    color: black;
+    width: max-content;
+    padding: 0 12px;
+    background-color: transparent;
+    text-transform: uppercase;
+    border-bottom: 2px solid $primary-color;
+  }
+
+  &__content {
+    @include setFlexProperty(column, flex-start, flex-start, 10px);
+    padding: 0px 15px;
+    .item {
+      @include typography-s-normal();
+    }
+  }
+}

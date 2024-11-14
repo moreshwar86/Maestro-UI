@@ -1,0 +1,78 @@
+@use "../../styles/global" as *;
+.sidebar-menu {
+  height: 100vh;
+  background-color: #f8f9fa;
+  position: fixed;
+  left: 0;
+  top: 0px;
+  padding: 15px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0px 0px 30px 0px;
+    @include setFlexProperty(column, center, center, 30px);
+  }
+
+  &__logo {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 50%; /* the magic */
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    text-align: center;
+    color: $secondary-color;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: $light-blue;
+    padding: 10px;
+  }
+
+  &__item {
+    a {
+      @include setFlexProperty(row, center, center, 15px);
+      color: #333;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      padding: 5px;
+      background: $WHITE;
+
+      &:hover {
+        background-color: $light-blue;
+      }
+
+      &.active {
+        background-color: $primary-color;
+        color: $WHITE;
+      }
+    }
+
+    .icon {
+      margin-right: 10px;
+      font-size: 1.2em;
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+
+    &.open {
+      transform: translateX(0);
+    }
+  }
+}

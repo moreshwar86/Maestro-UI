@@ -1,0 +1,36 @@
+@use "../../styles/global" as *;
+.textarea-container {
+  @include setFlexProperty(column, flex-start, flex-start, 5px);
+
+  &.textarea-container-inline {
+    @include setFlexProperty(row, flex-start, center, 5px);
+    .textarea-label {
+      width: 200px;
+    }
+  }
+  .textarea-label {
+    @include typography-m-normal();
+    width: 300px;
+  }
+  .textarea-wrapper {
+    .textarea-field {
+      width: 300px;
+      padding: 8px;
+      border: 1px solid $GREY;
+      border-radius: 5px;
+      @include typography-m-normal();
+      resize: vertical;
+      &.error {
+        border: 1px solid $RED;
+      }
+    }
+    &:disabled {
+      @include setDisabledInput();
+    }
+    .error-message {
+      color: $RED;
+      margin: 0;
+      padding-top: 10px;
+    }
+  }
+}

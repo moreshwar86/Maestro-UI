@@ -1,0 +1,38 @@
+@use "../../styles/global" as *;
+
+.checkbox-group {
+  @include setFlexProperty(column, flex-start, flex-start, 5px);
+  &.checkbox-group-inline {
+    @include setFlexProperty(row, flex-start, flex-start, 5px);
+    .checkbox-group-label {
+      width: 200px;
+    }
+  }
+  .checkbox-group-label {
+    @include typography-m-normal();
+    width: 300px;
+  }
+  .checkbox-group-container {
+    .checkbox-group-options {
+      min-width: 300px;
+      @include setFlexProperty(row, flex-start, flex-start, 5px);
+      .checkbox-group-input {
+        cursor: pointer;
+        @include typography-m-normal();
+        input {
+          &:disabled {
+            @include setDisabledInput();
+          }
+        }
+      }
+      &.checkbox-group-options-column {
+        @include setFlexProperty(column, flex-start, flex-start, 5px);
+      }
+    }
+    .error-message {
+      color: $RED;
+      margin: 0;
+      padding-top: 10px;
+    }
+  }
+}

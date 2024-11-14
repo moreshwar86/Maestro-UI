@@ -1,0 +1,38 @@
+@use "../../styles/global" as *;
+
+.datepicker-group {
+  @include setFlexProperty(column, flex-start, flex-start, 5px);
+  &.datepicker-group-inline {
+    @include setFlexProperty(row, flex-start, flex-start, 5px);
+    .datepicker-group-label {
+      width: 200px;
+    }
+  }
+  .datepicker-group-label {
+    @include typography-m-normal();
+    width: 300px;
+  }
+  .datepicker-input-container {
+    width: 300px;
+    .datepicker-input {
+      width: calc(100% - 20px);
+      height: 40px;
+      border: 1px solid $GREY;
+      border-radius: 5px;
+      padding: 0 10px;
+      @include typography-m-normal();
+      outline: none;
+      &.error {
+        border: 1px solid $RED;
+      }
+      &:disabled {
+        @include setDisabledInput();
+      }
+    }
+    .error-message {
+      color: $RED;
+      margin: 0;
+      padding-top: 10px;
+    }
+  }
+}

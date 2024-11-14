@@ -1,0 +1,57 @@
+@use "../../styles/global" as *;
+
+.phone-number-container {
+  @include setFlexProperty(column, flex-start, flex-start, 5px);
+  &.phone-number-container-inline {
+    @include setFlexProperty(row, flex-start, center, 5px);
+    .phone-number-label {
+      width: 200px;
+    }
+  }
+  .phone-number-label {
+    @include typography-m-normal();
+    width: 300px;
+  }
+  .phone-number-wrapper {
+    width: 300px;
+
+    .phone-number-field {
+      @include setFlexProperty(row, flex-start, center, 0px);
+      .phone-number-input,
+      .country-code-select {
+        height: 40px;
+        border: 1px solid $GREY;
+        padding: 0 10px;
+        @include typography-m-normal();
+        outline: none;
+      }
+      .phone-number-input {
+        width: calc(100% - 20px);
+        border-bottom-right-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        &.error {
+          border: 1px solid $RED;
+        }
+        &:disabled {
+          @include setDisabledInput();
+        }
+      }
+      .country-code-select {
+        width: auto;
+        border-bottom-left-radius: $border-radius;
+        border-top-left-radius: $border-radius;
+        &.error {
+          border: 1px solid $RED;
+        }
+        &.disabled {
+          @include setDisabledInput();
+        }
+      }
+    }
+    .error-message {
+      color: $RED;
+      margin: 0;
+      padding-top: 10px;
+    }
+  }
+}

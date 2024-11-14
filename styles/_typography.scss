@@ -1,0 +1,59 @@
+@use "fonts" as *;
+@mixin typography-xs-normal() {
+  font-family: $lato-regular;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+@mixin typography-xs-bold() {
+  font-family: $lato-bold;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+}
+
+@mixin typography-s-normal() {
+  font-family: $lato-regular;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+@mixin typography-s-bold() {
+  font-family: $lato-bold;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+}
+@mixin typography-m-normal() {
+  font-family: $lato-regular;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+@mixin typography-m-bold() {
+  font-family: $lato-bold;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+}
+@mixin typography-l-normal() {
+  font-family: $lato-regular;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+@mixin typography-l-bold() {
+  font-family: $lato-bold;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+}

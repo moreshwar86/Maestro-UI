@@ -1,0 +1,46 @@
+@use "../../styles/global" as *;
+
+.btn {
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 5px;
+  @include typography-m-normal();
+  cursor: pointer;
+  @include setFlexProperty(row, center, center, 5px);
+
+  &-contained-primary {
+    @include setContainedBtnProperty($primary-color);
+  }
+
+  &-contained-secondary {
+    @include setContainedBtnProperty($secondary-color);
+  }
+
+  &-contained-danger {
+    @include setContainedBtnProperty($RED);
+  }
+
+  &-text-primary {
+    @include setTextBtnProperty($primary-color);
+  }
+  &-text-secondary {
+    @include setTextBtnProperty($secondary-color);
+  }
+  &-text-danger {
+    @include setTextBtnProperty($RED);
+  }
+
+  &-outlined-primary {
+    @include setOutlinedBtnProperty($primary-color);
+  }
+  &-outlined-secondary {
+    @include setOutlinedBtnProperty($secondary-color);
+  }
+  &-outlined-danger {
+    @include setOutlinedBtnProperty($RED);
+  }
+
+  &[disabled] {
+    @include setDisabledInput();
+  }
+}

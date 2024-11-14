@@ -1,0 +1,29 @@
+@use "../../../styles/global" as *;
+
+.request-details-form {
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+
+  .form-section {
+    margin-bottom: 24px;
+
+    &__title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      @include setFlexProperty(row, center, center, 10px);
+    }
+
+    &__content {
+      @include setFlexProperty(row, center, center, 10px);
+      margin: 20px;
+    }
+
+    &__footer {
+      @include setFlexProperty(row, center, center, 10px);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@use "../../styles/global" as *;
+.switch-toggle-container {
+  @include setFlexProperty(column, flex-start, flex-start, 5px);
+  &.switch-toggle-container-inline {
+    @include setFlexProperty(row, flex-start, center, 5px);
+    .switch-toggle-label {
+      width: 200px;
+    }
+  }
+  .switch-toggle-label {
+    @include typography-m-normal();
+    width: 300px;
+  }
+  .switch-toggle-wrapper {
+    .switch-toggle {
+      position: relative;
+      width: 60px;
+      height: 34px;
+      background-color: $GREY;
+      border-radius: 34px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      &.checked {
+        background-color: $primary-color;
+        .switch-toggle-slider {
+          transform: translateX(26px);
+        }
+      }
+      &.disabled {
+        @include setDisabledInput();
+      }
+      .switch-toggle-slider {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: $WHITE;
+        border-radius: 50%;
+        transition: 0.3s;
+      }
+    }
+    .error-message {
+      color: $RED;
+      margin: 0;
+      padding-top: 10px;
+    }
+  }
+}
